@@ -2,10 +2,10 @@ const todoList = document.querySelector('.todo-list');
 const newTaskInput = document.querySelector('#new-task');
 const addTaskBtn = document.querySelector('#add-task-btn');
 
-// Load to-do list from local storage
+
 let toDos = JSON.parse(localStorage.getItem('toDos')) || [];
 
-// Render to-do list
+
 function renderTodoList() {
   todoList.innerHTML = '';
 
@@ -41,7 +41,7 @@ function renderTodoList() {
   });
 };
 
-// Add new to-do item
+
 addTaskBtn.addEventListener('click', () => {
   const newTaskText = newTaskInput.value;
   if (newTaskText.length > 0) {
@@ -58,5 +58,4 @@ addTaskBtn.addEventListener('click', () => {
   }
 });
 
-// Render to-do list on initial load
 renderTodoList();
